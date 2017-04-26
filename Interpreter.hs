@@ -6,8 +6,8 @@ module Shentong.Interpreter.Interpreter ( evalTopLevel ) where
 import Shentong.Interpreter.AST
 import Control.Monad.Except
 import Data.IORef
-import Shentong.Types
-import Shentong.Utils
+import Shentong.Core.Types
+import Shentong.Core.Utils
 
 evalTopLevel :: TopLevel -> KLContext Env KLValue
 evalTopLevel (SE se) = reduceSExpr [] se >>= eval []

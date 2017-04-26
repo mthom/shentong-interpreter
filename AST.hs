@@ -8,8 +8,8 @@ import Control.Monad.Except
 import Control.Monad.State
 import Data.Generics.Uniplate.Operations
 import Data.Traversable
-import Shentong.Types
-import Shentong.Utils
+import Shentong.Core.Types
+import Shentong.Core.Utils
 
 reduceSExpr :: ParamList -> SExpr -> KLContext Env RSExpr
 reduceSExpr args body = markBoundVars args (bakeFreeVars args body)
